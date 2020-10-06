@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counter using Javascript</title>
+	<link rel="stylesheet"  href="styles.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+  
+</head>
+<body>
+	<div class="container">
+		<div id="number">
+			0
+		</div>
+		<button type="button" class="btn btn-success" id="plus">+</button>
+		<button type="button" class="btn btn-info" id="auto">Auto</button>
+		<button type="button" class="btn btn-danger" id="minus">-</button>
+	</div>
+  <script>
+  	let nr = document.getElementById("number");
+  	let plus =document.getElementById("plus");
+  	let minus =document.getElementById("minus");
+    let auto = document.getElementById("auto");
+  	let number = 0;
+
+  	plus.addEventListener("click", function(){
+  		number ++;
+  		nr.innerHTML = number;
+  	})
+  		minus.addEventListener("click", function(){
+  		number --;
+  		nr.innerHTML = number;
+  	})
+    auto.addEventListener("click", function(){
+    	number = 0;
+    	nr.innerHTML = number;
+    })
+  	
+  </script>
+</body>
+</html>
